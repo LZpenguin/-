@@ -1,0 +1,42 @@
+<view class="page-index">
+  <image class="red-back" src="../../public/imgs/red-back.png"></image>
+  <view class="list-navi">
+    <text class="list-all" bindtap="setListNavi" data-index="0">当前村</text>
+    <text class="list-spot" bindtap="setListNavi" data-index="1">推荐</text>
+    <text class="list-food" bindtap="setListNavi" data-index="2">附近村</text>
+    <image class="bottom-hover" style="left: calc(125rpx - 12.5px + {{250*listNavi}}rpx)" src="../../public/imgs/bottom-hover.png"></image>
+  </view>
+  <view class="card-container" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd">
+    <view class="cards" >
+      <view style="position: relative;left:0;height:100%;width:100%;top: calc({{touchMove}}px - {{100*cardNavi}}% );transition: all linear 0.2s">
+        <view class="card" wx:for="{{cardList}}" wx:key="id" style="top: {{100*(index)}}%">
+          <Card title="{{item.name}}" pics="{{item.shuffling}}" intro="{{item.description}}"></Card>
+        </view>
+      </view>
+    </view>
+    <view class="btn-groups">
+      <view class="btn-group village" wx:if="{{cardNow.vid}}">
+        <image class="icon" src="../../public/demo/village-pic.png" bindtap="toVillagePage" data-vid="{{cardNow.vid}}" mode="aspectFill"></image>
+      </view>
+      <view class="btn-group author">
+        <image class="icon" src="{{cardNow.avatar}}" bindtap="toAuthorPage" data-uid="{{cardNow.uid}}" mode="aspectFill"></image>
+      </view>
+      <view class="btn-group like" >
+        <image class="icon" src="{{cardNow.whether_love?'../../public/imgs/liked2.png':'../../public/imgs/like2.png'}}" bindtap="likeCard"></image>
+        <view class="count">{{cardNow.loveFixed}}</view>
+      </view>
+      <view class="btn-group collect">
+        <image class="icon" src="{{cardNow.whether_collect?'../../public/imgs/collected2.png':'../../public/imgs/collect2.png'}}"  bindtap="collectCard"></image>
+        <view class="count">{{cardNow.collectFixed}}</view>
+      </view>
+      <view class="btn-group share">
+        <image class="icon" src="../../public/imgs/share.png"></image>
+        <view class="count">{{cardNow.shareFixed}}</view>
+      </view>
+    </view>
+    <view class="btns">
+      <view class="last" bindtap="last">上一站</view>
+      <view class="next" bindtap="next">下一站</view>
+    </view>
+  </view>
+</view>

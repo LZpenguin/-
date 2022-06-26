@@ -1,0 +1,90 @@
+.page-author {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+}
+.page-author .red-back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 750rpx;
+  height: 330rpx;
+  z-index: -1;
+}
+.page-author .user-info {
+  display: flex;
+  align-items: center;  
+  height: 200rpx;
+  padding: 40rpx 54rpx;
+  color: #fff;
+}
+.page-author .user-info .avatar {
+  width: 42px;
+  height: 42px;
+  margin-right: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+.page-author .user-info .name-and-other {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.page-author .user-info .name-and-other .other {
+  font-size: 12px;
+}
+.page-author .card-lists {
+  height: calc(100% - 200rpx);
+  background-color: #fff;
+  border-radius: 22px 22px 0 0;
+}
+.page-author .card-lists .card-navi {
+  position: relative;
+  display: flex;
+  height: 90rpx;
+  padding-bottom: 2px;
+}
+.page-author .card-lists .card-navi>view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33.3%;
+  height: 100%;
+  color: #979797;
+  transition: all linear 0.1s;
+}
+.page-author .card-lists .card-navi .bottom-hover {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 33.3;
+  height: 2px;
+  background-color: #000;
+}
+.page-author .card-lists .card-navi .choosen {
+  color: #000;
+  font-weight: bold;
+}
+.page-author .card-lists .card-list {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 90rpx);
+  overflow: hidden;
+}
+.page-author .card-lists .card-list>view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  overflow: scroll;
+  transition: all linear 0.2s;
+}

@@ -1,0 +1,12 @@
+<view class="cpnt-card-show">
+  <view class="title">{{title}}</view>
+  <view class="info">
+    <view class="pics-container" bindtouchstart="touchStart" bindtouchend="touchEnd">
+      <image class="pic" mode="aspectFill" wx:for="{{pics}}" wx:key="item" src="{{item}}" style="left: {{(index-focus)*100}}%"/>
+      <view class="dots" style="width: {{8*(2*pics.length-1)}}px;left: calc(50% - {{4*(2*pics.length-1)}}px);{{pics.length<=1?'display:none':''}}">
+        <view class="dot {{index==focus?'choosen':''}}" wx:for="{{pics}}" wx:key="item"></view>
+      </view>
+    </view>
+    <view class="intro">{{intro}}</view>
+  </view>
+</view>

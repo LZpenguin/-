@@ -1,0 +1,48 @@
+.page-new-succ {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+}
+.page-new-succ .succ-back {
+  width: 412rpx;
+  height: 554rpx;
+  margin-top: 200rpx;
+}
+.page-new-succ .tip {
+  margin-bottom: 20px;
+  font-size: 17px;
+}
+.page-new-succ .detail {
+  width: 600rpx;
+  margin-bottom: 54px;
+  text-align: center;
+  color: #888;
+}
+.page-new-succ .btns {
+  display: flex;
+  justify-content: center;
+}
+.page-new-succ .btns .to-village {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 260rpx;
+  height: 80rpx;
+  margin-right: 72rpx;
+  background-color: #f4f4f4;
+  border-radius: 4px;
+}
+.page-new-succ .btns .new-again {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 260rpx;
+  height: 80rpx;
+  color: #fff;
+  background-color: #e22400;
+  border-radius: 4px;
+}

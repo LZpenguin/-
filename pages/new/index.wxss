@@ -1,0 +1,160 @@
+.page-new {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding: 64rpx;
+  overflow: auto;
+}
+.page-new .vague-back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.page-new .box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #e22400;
+  border-radius: 22px;
+  overflow: hidden;
+}
+.page-new .box>.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 108rpx;
+  color: #fff;
+}
+.page-new .box .fillin {
+  flex: 1;
+  padding: 36rpx 48rpx;
+  border-radius: 22px;
+  background-color: #fff;
+  overflow: auto;
+}
+.page-new .box .fillin .author {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.page-new .box .fillin .author .avatar {
+  width: 36px;
+  height: 36px;
+  margin-right: 15px;
+  background-color: #f4f4f4;
+  border-radius: 50%;
+}
+.page-new .box .fillin .block {
+  margin-bottom: 32rpx;
+  padding: 30rpx;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0px 2px 9px 1px rgba(0, 0, 0, 0.15);
+}
+.page-new .box .fillin .block input,
+.page-new .box .fillin .block textarea {
+  width: 100%;
+  height: 70rpx;
+  padding: 0 16rpx;
+  background-color: #f4f4f4;
+  border-radius: 6px;
+}
+.page-new .box .fillin .block textarea {
+  height: 160rpx;
+  padding: 16rpx;
+}
+.page-new .box .fillin .block>.title {
+  margin-bottom: 30rpx;
+}
+.page-new .box .fillin .add-pic .pic-list {
+  display: flex;
+  padding-top: 20rpx;
+  overflow-x: scroll;
+}
+.page-new .box .fillin .add-pic .pic-list>.pic-box,
+.page-new .box .fillin .add-pic .pic-list>.add-btn {
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 210rpx;
+  height: 252rpx;
+  margin-right: 30rpx;
+  background: #F4F4F4;
+  border-radius: 12px;
+}
+.page-new .box .fillin .add-pic .pic-list>.pic-box>.pic {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+.page-new .box .fillin .add-pic .pic-list>.pic-box>.pic-delete {
+  position: absolute;
+  right: -16rpx;
+  top: -16rpx;
+  width: 45rpx;
+  height: 45rpx;
+}
+.page-new .box .fillin .add-pic .pic-list>.add-btn>.icon {
+  width: 48rpx;
+  height: 48rpx;
+}
+.page-new .box .fillin .add-pic .pic-list>.add-btn>.file {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 1;
+}
+.page-new .box .fillin .block .chose-tag>.title {
+  margin-bottom: 16rpx;
+}
+.page-new .box .fillin .block .chose-tag>.tag-list {
+  display: flex;
+  overflow-x: scroll;
+}
+.page-new .box .fillin .block .chose-tag>.tag-list>text {
+  flex-shrink: 0;
+  font-size: 12px;
+  margin-right: 10rpx;
+  padding: 6rpx 10rpx;
+  background-color: #f4f4f4;
+  border-radius: 12rpx;
+}
+.page-new .box .fillin .block .chose-tag>.tag-list>.choosen {
+  color: #fff;
+  background-color: #e22400;
+}
+.page-new .box .btns {
+  display: flex;
+}
+.page-new .box .btns .cancel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 72rpx;
+  margin-right: 40rpx;
+  color: #fff;
+  background-color: #000;
+  border-radius: 4px;
+}
+.page-new .box .btns .new {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 72rpx;
+  color: #fff;
+  background-color: #e22400;
+  border-radius: 4px;
+}

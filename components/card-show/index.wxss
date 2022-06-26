@@ -1,0 +1,71 @@
+.cpnt-card-show {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 6px;
+  z-index: 1;
+}
+.cpnt-card-show .title {
+  font-size: 17px;
+  font-weight: bold;
+  z-index: inherit;
+}
+.cpnt-card-show .info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: inherit;
+}
+.cpnt-card-show .info .pics-container {
+  position: relative;
+  width: 480rpx;
+  height: 640rpx;
+  margin-bottom: 32rpx;
+  background-color: #f6efdd;
+  overflow: hidden;
+  z-index: inherit;
+}
+.cpnt-card-show .info .pics-container .pic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all linear 0.2s;
+}
+.cpnt-card-show .info .pics-container .dots {
+  box-sizing: content-box;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 8px;
+  height: 8px;
+  padding: 4px;
+  border-radius: 9px;
+  background-color: rgba(177, 177, 177, 0.5);
+}
+.cpnt-card-show .info .pics-container .dots .dot {
+  width: 8px;
+  height: 8px;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 50%;
+}
+.cpnt-card-show .info .pics-container .dots .choosen {
+  background-color: rgba(255,255,255,1);
+}
+.cpnt-card-show .info .intro {
+  width: 420rpx;
+  font-size: 12px;
+  color: rgba(0,0,0,.7);
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box; 
+  -webkit-box-orient: vertical; 
+  -webkit-line-clamp: 3; 
+  overflow: hidden; 
+}

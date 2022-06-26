@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "Card": "/components/card-pic/index"
+  },
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "村庄"
+}

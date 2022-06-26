@@ -1,0 +1,3 @@
+<view class="cpnt-card-pic" bindtap="toCardPage">
+  <image class="cover" src="{{pics&&pics[0]}}" mode="aspectFill"></image>
+</view>

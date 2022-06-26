@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class="page-range">
+  <image class="red-back" src="../../public/imgs/red-back.png"></image>
+  <view class="list-navi">
+    <text class="list-all" bindtap="setListNavi" data-index="0">村总榜</text>
+    <text class="list-spot" bindtap="setListNavi" data-index="1">景区榜</text>
+    <text class="list-food" bindtap="setListNavi" data-index="2">美食榜</text>
+    <text class="list-indust" bindtap="setListNavi" data-index="3">产业榜</text>
+    <image class="bottom-hover" style="left: calc(94.25rpx - 12.5px + {{188.5*listNavi}}rpx)" src="../../public/imgs/bottom-hover.png"></image>
+  </view>
+  <view class="lists">
+    <view class="allList" style="left: {{(0-listNavi)*100}}%">
+      <Card wx:for="{{vList}}" wx:key="id" village="{{item.name}}" avatar="{{item.card.avatar}}" name="{{item.card.username}}" time="{{item.card.createdTime}}" info="{{item.card.description}}" weather="XX村天气 ：晴 20℃" like="{{item.card.love}}" collect="{{item.card.collect}}" cid="{{item.card.id}}" to="/pages/other-village/index?vid={{item.id}}"></Card>
+    </view>
+    <view class="tagLists" wx:for="{{tagLists}}" wx:key="name" style="left: {{(index+1-listNavi)*100}}%">
+      <Card wx:for="{{item.list}}" wx:key="id" wx:for-item="item2" village="{{item2.name}}" avatar="{{item2.avatar}}" name="{{item2.username}}" time="{{item2.createdTime}}" info="{{item2.description}}" weather="XX村天气 ：晴 20℃" like="{{item2.love}}" collect="{{item2.collect}}" cid="{{item2.id}}" to="/pages/author/index?uid={{item2.uid}}"></Card>
+    </view>
+  </view>
+</view>

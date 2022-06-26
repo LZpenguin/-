@@ -1,0 +1,52 @@
+<view class="page-village">
+  <view style="height: 100%;display: {{settled?'block':'none'}}">
+    <image class="pic" src="../../public/demo/village-pic.png"></image>
+    <view class="settle-out" bindtap="settleOut">退出村庄</view>
+    <view class="info">
+      <view class="name">{{village.name}}</view>
+      <view class="loc"></view>
+      <view class="space"></view>
+      <view class="viewed">
+        <text style="margin-right: 10px">村民数：{{villager}}</text>
+        <text style="margin-right: 10px">名片数：{{cards}}</text>
+        <text>点赞数：{{like}}</text>
+      </view>
+    </view>
+    <view class="card-list">
+      <Card wx:for="{{cardList}}" pics="{{item.shuffling}}" cid="{{item.id}}" uid="{{}}"></Card>
+    </view>
+  </view>
+  <view style="height: 100%;display: {{settled?'none':'block'}}">
+    <image class="red-back" src="../../public/imgs/red-back.png"></image>
+    <view class="tip">
+      <view>您好，</view>
+      <view>欢迎入驻村旅者</view>
+    </view>
+    <view class="fillin">
+      <view class="group">
+        <view class="key">姓名</view>
+        <input class="value" type="text" placeholder="请输入您的姓名" value="{{name}}" bindinput="nameChange"/>
+      </view>
+      <view class="group">
+        <view class="key">电话</view>
+        <input class="value" type="text" placeholder="请输入您的电话"  value="{{phone}}" bindinput="phoneChange"/>
+      </view>
+      <view class="group">
+        <view class="key">邮箱</view>
+        <input class="value" type="text" placeholder="请输入您的邮箱"  value="{{email}}" bindinput="emailChange"/>
+      </view>
+      <view class="group">
+        <view class="key">村籍</view>
+        <view class="pickers">
+          <picker mode="region" bindchange="regionSelect" value="{{region}}" style="flex: 7;margin-right: 10px">
+            <view class="value picker">{{region[0]}}，{{region[1]}}，{{region[2]}}</view>
+          </picker>
+          <picker mode="selector" bindchange="villageSelect" range="{{vList2}}" value="{{vNavi}}" style="flex: 4">
+            <view class="value picker">{{vList.length?vList2[vNavi]:''}}</view>
+          </picker>
+        </view>
+      </view>
+      <view class="btn" bindtap="settleIn">申请入驻</view>
+    </view>
+  </view>
+</view>

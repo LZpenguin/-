@@ -1,0 +1,34 @@
+.cpnt-card-pic {
+  position: relative;
+  flex-shrink: 0;
+  width: 249rpx;
+  height: 332rpx;
+  margin-bottom: 1.5rpx;
+  overflow: hidden;
+}
+.cpnt-card-pic .cover {
+  width: 100%;
+  height: 100%;
+}
+.cpnt-card-pic .title {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 5rpx 0;
+  text-align: center;
+  font-size: 10px;
+  color: #fff;
+  background: rgba(0,0,0,.5)
+}
+.cpnt-card-pic .tag {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 5rpx 0;
+  text-align: center;
+  font-size: 10px;
+  color: #e22400;
+  background: rgba(0,0,0,.5)
+}

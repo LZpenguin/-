@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/range/index",
+    "pages/new/index",
+    "pages/village/index",
+    "pages/user/index",
+    "pages/new-succ/index",
+    "pages/author/index",
+    "pages/card/index",
+    "pages/other-village/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#e22401",
+    "navigationBarBackgroundColor": "#e22400",
+    "navigationBarTitleText": "村旅者",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#ff4015",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "public/imgs/index-o.png",
+        "selectedIconPath": "public/imgs/index.png"
+      },
+      {
+        "pagePath": "pages/range/index",
+        "text": "排行榜",
+        "iconPath": "public/imgs/range-o.png",
+        "selectedIconPath": "public/imgs/range.png"
+      },
+      {
+        "pagePath": "pages/new/index",
+        "text": "",
+        "iconPath": "public/imgs/new.png",
+        "selectedIconPath": "public/imgs/new.png"
+      },
+      {
+        "pagePath": "pages/village/index",
+        "text": "我的村",
+        "iconPath": "public/imgs/village-o.png",
+        "selectedIconPath": "public/imgs/village.png"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "个人中心",
+        "iconPath": "public/imgs/user-o.png",
+        "selectedIconPath": "public/imgs/user.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "旅游地点定位"
+    }
+  }
+}

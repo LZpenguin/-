@@ -1,0 +1,9 @@
+<view class="page-new-succ">
+  <image class="succ-back" src="../../public/imgs/succ-back.png"></image>
+  <view class="tip">创建成功</view>
+  <view class="detail">内容详情，根据实际情况来，如果换行则不超过规定长度，居中展现文字链接</view>
+  <view class="btns">
+    <view class="to-village" bindtap="toVillage">返回我的村首页</view>
+    <view class="new-again" bindtap="newAgain">继续创建新名片</view>
+  </view>
+</view>

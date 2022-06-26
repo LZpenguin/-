@@ -1,0 +1,130 @@
+.page-index {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+}
+.page-index .red-back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 750rpx;
+  height: 330rpx;
+  z-index: -1;
+}
+.page-index .list-navi {
+  display: flex;
+  justify-content: space-around;
+  width: 750rpx;
+  height: 125rpx;
+  padding-top: 32rpx;
+  color: #fff;
+}
+.page-index .list-navi>text {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.page-index .list-navi .bottom-hover {
+  position: absolute;
+  left: calc(125rpx - 12.5px);
+  top: 45px;
+  width: 25px;
+  height: 2px;
+  transition: all linear .1s;
+}
+.page-index .card-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 125rpx);
+  padding: 35px 30px;
+  background-color: #f6efdd;
+  border-radius: 22px 22px 0 0;
+}
+.page-index .card-container .btn-groups {
+  position: absolute;
+  right: 30rpx;
+  bottom: 150rpx;
+}
+.page-index .card-container .btn-groups .btn-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 32px;
+  height: 150rpx;
+  z-index: 2;
+}
+.page-index .card-container .btn-group .icon {
+  width: 32px;
+  height: 32px;
+  z-index: inherit;
+}
+.page-index .card-container .author .icon {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+}
+.page-index .card-container .village .icon {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+}
+.page-index .card-container .btn-group .count {
+  z-index: inherit;
+}
+.page-index .card-container .cards {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  min-height: 900rpx;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.page-index .card-container .cards .card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 30rpx;
+  background-color: #fff;
+  border-radius: 6px;
+  transition: all linear 0.2s;
+}
+.page-index .card-container .btns {
+  display: flex;
+} 
+.page-index .card-container .btns .last {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 30rpx;
+  color: #fff;
+  background-color: #000;
+  border-radius: 4px;
+}
+.page-index .card-container .btns .next {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80rpx;
+  margin: 0 36rpx;
+  color: #fff;
+  background-color: #e22400;
+  border-radius: 4px;
+}
+
+
+card {
+  width: 100%;
+  height: 100%;
+}

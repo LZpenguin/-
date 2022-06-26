@@ -1,0 +1,39 @@
+<view class="page-card">
+  <image class="red-back" src="../../public/imgs/red-back.png"></image>
+  <view class="card-container">
+    <image class="blur-back" src="{{cardInfo.shuffling[focus]}}" mode="aspectFill"></image>
+    <view class="card">
+      <view class="village">{{cardInfo.name}}</view>
+      <view class="info">
+        <view class="pics-container" bindtouchstart="touchStart" bindtouchend="touchEnd">
+          <image class="pic" mode="aspectFill" wx:for="{{cardInfo.shuffling}}" wx:key="item" src="{{item}}" style="left: {{(index-focus)*100}}%"/>
+          <view class="dots" style="width: {{8*(2*cardInfo.shuffling.length-1)}}px;left: calc(50% - {{4*(2*cardInfo.shuffling.length-1)}}px);{{cardInfo.shuffling.length<=1?'display: none':''}}">
+            <view class="dot {{index==focus?'choosen':''}}" wx:for="{{cardInfo.shuffling}}" wx:key="item"></view>
+          </view>
+        </view>
+        <view class="intro">{{cardInfo.description}}</view>
+      </view>
+    </view>
+    <view class="btn-groups">
+      <view class="btn-group author">
+        <image class="icon" src="{{cardInfo.avatar}}" bindtap="goAuthorPage" mode="aspectFill"></image>
+      </view>
+      <view class="btn-group like" >
+        <image class="icon" src="{{cardInfo.whether_love?'../../public/imgs/liked2.png':'../../public/imgs/like2.png'}}" bindtap="likeCard"></image>
+        <view class="count">{{cardInfo.love}}</view>
+      </view>
+      <view class="btn-group collect">
+        <image class="icon" src="{{cardInfo.whether_collect?'../../public/imgs/collected2.png':'../../public/imgs/collect2.png'}}"  bindtap="collectCard"></image>
+        <view class="count">{{cardInfo.collect}}</view>
+      </view>
+      <view class="btn-group share">
+        <image class="icon" src="../../public/imgs/share.png"></image>
+        <view class="count">{{cardInfo.share}}</view>
+      </view>
+    </view>
+    <!-- <view class="btns">
+      <view class="last">上一站</view>
+      <view class="next">下一站</view>
+    </view> -->
+  </view>
+</view>

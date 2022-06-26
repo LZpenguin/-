@@ -1,0 +1,29 @@
+<view class="page-user">
+  <image class="red-back" src="../../public/imgs/red-back.png"></image>
+  <view class="user-info" bindtap="login">
+    <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+    <view class="name-and-other">
+      <view class="name">{{userInfo.nickName!=='点击登录'?'昵称：':''}}{{userInfo.nickName}}</view>
+      <view class="other">{{village && village+'村的'}}{{userInfo.nickName!=='点击登录'?userInfo.nickName:''}}，点赞 {{likeCount}},粉丝 {{followerCount}}</view>
+    </view>
+  </view>
+  <view class="card-lists">
+    <view class="card-navi">
+      <view class="{{listNavi==0?'choosen':''}}" bindtap="setListNavi" data-index="0">我发布的</view>
+      <view class="{{listNavi==1?'choosen':''}}" bindtap="setListNavi" data-index="1">我的收藏</view>
+      <view class="{{listNavi==2?'choosen':''}}" bindtap="setListNavi" data-index="2">我的足迹</view>
+      <view class="bottom-hover" style="left: {{33.3*listNavi}}%"></view>
+    </view>
+    <view class="card-list" bindtouchstart="touchStart" bindtouchend="touchEnd">
+      <view class="published" style="left: {{0-100*listNavi}}%">
+        <Card wx:for="{{publishedList}}" wx:key="id" pics="{{item.shuffling}}" cid="{{item.id}}" uid="{{user.uid}}" bindlongpress="delCard" data-cid="{{item.id}}" data-title="{{item.name}}"></Card>
+      </view>
+      <view class="collected" style="left: {{100-100*listNavi}}%">
+        <Card wx:for="{{collectedList}}" wx:key="id" pics="{{item.shuffling}}" cid="{{item.id}}" uid="{{user.uid}}" bindlongpress="cancelCollect" data-cid="{{item.id}}" data-title="{{item.name}}"></Card>
+      </view>
+      <view class="viewed" style="left: {{200-100*listNavi}}%">
+        <Card wx:for="{{viewedList}}" wx:key="id" pics="{{item.shuffling}}" cid="{{item.id}}" uid="{{user.uid}}"></Card>
+      </view>
+    </view>
+  </view>
+</view>

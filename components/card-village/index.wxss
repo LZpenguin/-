@@ -1,0 +1,96 @@
+.cpnt-card-village {
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+.cpnt-card-village .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  padding: 0 16px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.cpnt-card-village .header .village {
+  font-weight: bold;
+}
+.cpnt-card-village .header .more {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  color: #979797;
+}
+.cpnt-card-village .header .more .icon {
+  width: 5px;
+  height: 9px;
+  margin-left: 4px;
+}
+.cpnt-card-village .body {
+  padding: 7.5px 24px;
+}
+.cpnt-card-village .body .author {
+  display: flex;
+  margin-bottom: 10px;
+}
+.cpnt-card-village .body .author .avatar {
+  width: 28px;
+  height: 28px;
+  margin-right: 5px;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+}
+.cpnt-card-village .body .author .other {
+  display: flex;
+  flex-direction: column;
+}
+.cpnt-card-village .body .author .other .name {
+  font-size: 12px;
+}
+.cpnt-card-village .body .author .other .time {
+  font-size: 10px;
+  color: #979797
+}
+.cpnt-card-village .body .info {
+  font-size: 12px;
+  color: rbga(0,0,0,0.7);
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box; 
+  -webkit-box-orient: vertical; 
+  -webkit-line-clamp: 2; 
+  overflow: hidden; 
+}
+.cpnt-card-village .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  padding: 0 24px;
+  color: #979797;
+}
+.cpnt-card-village .bottom .weather {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+.cpnt-card-village .bottom .weather .logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 6px;
+}
+.cpnt-card-village .bottom .like-and-collect {
+  display: flex;
+}
+.cpnt-card-village .bottom .like-and-collect .like,
+.cpnt-card-village .bottom .like-and-collect .collect {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+.cpnt-card-village .bottom .like-and-collect .like {
+  margin-right: 8px;
+}
+.cpnt-card-village .bottom .like-and-collect .logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+}

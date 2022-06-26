@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Card": "/components/card-pic/index"
+  },
+  "navigationBarTitleText": "主页"
+}
